@@ -20,4 +20,11 @@ describe('HeroSectionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render name and des in a span tag', () => {
+    fixture = TestBed.createComponent(HeroSectionComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('span').textContent).toContain('Jayzee Huang');
+  });
 });
